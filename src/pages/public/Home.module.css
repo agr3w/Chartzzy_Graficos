@@ -1,18 +1,26 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100vh;
+  padding: clamp(1rem, 4vw, 3rem);
+  background-color: #f8fafc;
+}
+
+.container > * {
   max-width: 900px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 5vw, 1.5rem);
   font-weight: 700;
   color: #0f172a;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 600px) {
+  .title {
+    margin-bottom: 0.75rem;
+  }
 }
