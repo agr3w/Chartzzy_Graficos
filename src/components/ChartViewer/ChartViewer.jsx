@@ -74,7 +74,7 @@ export default function ChartViewer() {
           ],
         };
 
-      case 'radar':
+      case 'radar': {
         const maxVal = Math.max(...sales, ...targets, 100) * 1.2;
         return {
           title: { text: 'Radar Comparativo', left: 'center' },
@@ -93,6 +93,7 @@ export default function ChartViewer() {
             },
           ],
         };
+      }
 
       default:
         return {};
